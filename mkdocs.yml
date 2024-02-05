@@ -1,14 +1,14 @@
-copyright: Copyright &copy; 2021 - 2023 Lento Manickathan
-site_description: Personal website of Lento Manickathan
-site_author: Lento Manickathan
-site_name: Lento Manickathan
-site_url: https://lento234.ch/
+copyright: Copyright &copy; 2024 Clement Nevers
+site_description: Personal website of Clement Nevers
+site_author: Clement Nevers
+site_name: Clement Nevers
+site_url: https://cdnevers.ca
 site_dir: public
 
 # repository edit info
 edit_uri: edit/main/docs/
-repo_name: lento234/lento234.github.io
-repo_url: https://github.com/lento234/lento234.github.io
+repo_name: cdnevers/cdnevers.github.io
+repo_url: https://github.com/cdnevers/cdnevers.github.io
 
 # Table of content
 nav:
@@ -60,7 +60,7 @@ plugins:
   - awesome-pages
   - redirects:
       redirect_maps:
-        'cv.md': 'https://media.githubusercontent.com/media/lento234/cv/main/cv.pdf'
+        # 'cv.md': 'https://media.githubusercontent.com/media/cdnevers/cv/main/cv.pdf'
 
 markdown_extensions:
   - admonition
@@ -90,18 +90,18 @@ markdown_extensions:
 
 extra:
   social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/lento234
-    - icon: fontawesome/brands/mastodon
-      link: https://mastodon.social/@lento234
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/lento234
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/lento-manickathan/
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/u/mrlento234
-    - icon: fontawesome/solid/graduation-cap
-      link: https://scholar.google.ch/citations?user=wS-b8RcAAAAJ
+    # - icon: fontawesome/brands/github
+    #   link: https://github.com/cdnevers
+    # - icon: fontawesome/brands/mastodon
+    #   link: https://mastodon.social/@cdnevers
+    # - icon: fontawesome/brands/twitter
+    #   link: https://twitter.com/cdnevers
+    # - icon: fontawesome/brands/linkedin
+    #   link: https://www.linkedin.com/in/clementnevers/
+    # - icon: fontawesome/brands/docker
+    #   link: https://hub.docker.com/u/mrcdnevers
+    # - icon: fontawesome/solid/graduation-cap
+    #   link: https://scholar.google.ch/citations?user=wS-b8RcAAAAJ
   analytics:
     provider: google
     property: G-SDQ15H0726
