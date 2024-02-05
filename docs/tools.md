@@ -2,7 +2,7 @@
 
 ## Alternative Front-Ends
 
-<!-- * [nitter](https://nitter.net/) - Twitter front-end
+* [nitter](https://nitter.net/) - Twitter front-end
 * [invidious](https://invidious.io/) - YouTube front-end
 
 ## References
@@ -51,4 +51,4 @@
 ## Aviation, Aerospace, Astronomy
 
 * [Live ATC](https://www.liveatc.net/) - Live Air Traffic - From their headsets to you
-* [Starlink Satellite Map](https://satellitemap.space/?constellation=starlink) - Find location of all starlink satellites -->
+* [Starlink Satellite Map](https://satellitemap.space/?constellation=starlink) - Find location of all starlink satellites

@@ -2,8 +2,8 @@
 
 # [https://cdnevers.ca](https://cdnevers.ca)
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/lento234/lento234.github.io/main.yml?style=flat-square&labelColor=black)
-![CC BY 4.0](https://img.shields.io/github/license/lento234/lento234.github.io?style=flat-square&color=blue&labelColor=black)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/cdnevers/cdnevers.github.io/main.yml?style=flat-square&labelColor=black)
+![CC BY 4.0](https://img.shields.io/github/license/cdnevers/cdnevers.github.io?style=flat-square&color=blue&labelColor=black)
 
 ***Personal website hosted at `github`***
 
@@ -11,7 +11,7 @@
 
 ## Description
 
-Made with :heart: using [mkdocs](https://www.mkdocs.org/) and [materials for mkdocs](https://squidfunk.github.io/mkdocs-material/) theme.
+Made with using [mkdocs](https://www.mkdocs.org/) and [materials for mkdocs](https://squidfunk.github.io/mkdocs-material/) theme.
 
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/80x15.png
