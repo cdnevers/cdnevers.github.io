@@ -84,11 +84,11 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/
+      link: https://github.com/cdnevers
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in//
+      link: https://github.com/cdnevers
     - icon: fontawesome/solid/graduation-cap
-      link: https://scholar.google.com/
+      link: https://github.com/cdnevers
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
