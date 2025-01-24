@@ -150,14 +150,12 @@ img#card:hover {
 /* Normal Links */
 [data-md-color-scheme="slate"] a {
 /*   color: var(--md-accent-fg-color); /* Keeps Accent Color */
-  color: #bbbbbb !important; /* Light Gray */
-  text-decoration: none; /* Optional: Removes underline */
+  color: #cccccc !important; /* Light Gray */
 } 
 /* Hover Effect for Links */
 [data-md-color-scheme="slate"] a:hover {
 /*   color: #f8f8f8;  */
   color: var(--md-accent-fg-color) !important; 
-  text-decoration: underline; 
 }
 /* Cards */
 img#card {
