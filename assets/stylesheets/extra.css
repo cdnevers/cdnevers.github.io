@@ -264,6 +264,26 @@ img#card:hover {
   color: var(--md-accent-fg-color) !important; 
 }
 
+
+/* DARK MODE (Keep existing colors) */
+[data-md-color-scheme="slate"] .md-nav__item a {
+  color: #dddddd !important; /* Light Gray Text */
+}
+
+[data-md-color-scheme="slate"] .md-nav__item a:hover {
+  color: #ffffff !important; /* Full White on Hover */
+}
+
+/* LIGHT MODE (Fix text to be darker) */
+[data-md-color-scheme="default"] .md-nav__item a {
+  color: #222222 !important; /* Dark Gray */
+}
+
+[data-md-color-scheme="default"] .md-nav__item a:hover {
+  color: #000000 !important; /* Full Black on Hover */
+}
+
+
 /* Apply Light Mode Footer Style to Dark Mode */
 /* [data-md-color-scheme="slate"] .md-footer {
   background-color: #000000 !important; 
