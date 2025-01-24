@@ -1,14 +1,14 @@
 copyright: Copyright &copy; 2025 Clement Nevers
 site_description: Personal website of Clement Nevers
-site_author: Clement Nevers
-site_name: Clement Nevers
+site_author: Clément Nevers
+site_name: Clément Nevers
 site_url: https://cdnevers.github.io/
 site_dir: public
 
 # repository edit info
 edit_uri: edit/main/docs/
-repo_name: cdnevers/cdnevers.github.io/
-repo_url: https://github.com/cdnevers/cdnevers.github.io/
+# repo_name: cdnevers/cdnevers.github.io/
+# repo_url: https://github.com/cdnevers/cdnevers.github.io/
 
 # Table of content
 nav:
