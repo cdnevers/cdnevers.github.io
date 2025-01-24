@@ -148,12 +148,16 @@ img#card:hover {
   border: 1px solid #333333;
 }
 /* Normal Links */
-/* [data-md-color-scheme="slate"] a {
-  color: var(--md-accent-fg-color); /* Keeps Accent Color */
-/* } */ 
+[data-md-color-scheme="slate"] a {
+/*   color: var(--md-accent-fg-color); /* Keeps Accent Color */
+  color: #bbbbbb !important; /* Light Gray */
+  text-decoration: none; /* Optional: Removes underline */
+} 
 /* Hover Effect for Links */
 [data-md-color-scheme="slate"] a:hover {
-  color: #f8f8f8; /* Almost Full White on Hover */
+/*   color: #f8f8f8;  */
+  color: var(--md-accent-fg-color) !important; 
+  text-decoration: underline; 
 }
 /* Cards */
 img#card {
