@@ -1,1 +1,1 @@
-{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[]}
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"research/","title":"Research Overview","text":"<p>This section highlights my research projects and publications.</p> <p>Explore: - Publications - Projects</p>"}]}
