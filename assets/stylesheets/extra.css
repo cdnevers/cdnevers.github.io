@@ -1,4 +1,4 @@
-[data-md-color-scheme="slate"] {
+/* [data-md-color-scheme="slate"] {
   --md-hue: 220;
 }
 
@@ -22,4 +22,46 @@ img#card:hover {
   transform: scale(1);
   transition: .25s;
   box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.8);
+} */
+/* Global Styles */
+:root {
+  --md-primary-fg-color: #000;  /* Black top and bottom */
+  --md-primary-bg-color: #000;
+  --md-accent-fg-color: #ff2e63; /* Red accent */
 }
+
+/* Header & Footer */
+.md-header, .md-footer {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* Centered Homepage Layout */
+.home-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, black 50%, white 50%);
+}
+
+.home-container .parallax-layer {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.home-container .heading {
+  color: white;
+}
+
+.home-container .subheading {
+  color: black;
+}
+
+/* Professional Font (Montserrat or Inter recommended) */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+
