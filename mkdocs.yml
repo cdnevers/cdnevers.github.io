@@ -27,8 +27,8 @@ nav:
 theme:
   name: material
   custom_dir: overrides
-  logo: assets/images/logo.png
-  favicon: assets/images/favicon.svg
+  logo: assets/images/Logo_CN.png
+  favicon: assets/images/Logo_CN.png
   font:
     text: Noto Sans
     code: Fira code
