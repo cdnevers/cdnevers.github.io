@@ -76,15 +76,16 @@ img#card:hover {
 } */
 
 [data-md-color-scheme="slate"] {
-  --md-hue: 220;
+  --md-hue: 0;
+  --md-primary-fg-color: hsl(0, 0%, 0%);
 }
 
 [data-md-color-scheme="slate"][data-md-color-primary="black"][data-md-color-accent="red"] {
   --md-typeset-a-color: #ff5252;
 }
 
-[data-md-color-scheme="default"][data-md-color-primary="black"][data-md-color-accent="light-blue"] {
-  --md-typeset-a-color: #0277bd;
+[data-md-color-scheme="default"][data-md-color-primary="black"][data-md-color-accent="red"] {
+  --md-typeset-a-color: #ff5252;
 }
 
 .md-typeset pre {
