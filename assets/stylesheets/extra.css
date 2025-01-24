@@ -75,6 +75,20 @@ img#card:hover {
   color: black;
 } */
 
+/* Ensure footer background is fully black */
+[data-md-color-scheme="default"] .md-footer,
+[data-md-color-scheme="slate"] .md-footer {
+  background-color: #000000 !important; /* Fully Black */
+  color: #ffffff !important; /* Fully White Text */
+}
+
+/* Ensure footer copyright text is white */
+[data-md-color-scheme="default"] .md-footer-meta,
+[data-md-color-scheme="slate"] .md-footer-meta {
+  color: #ffffff !important; /* Ensure White Text */
+}
+
+
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color: #000000; /* Black Navbar */
   --md-default-bg-color: #111111; /* Almost Black Page Background */
@@ -251,10 +265,10 @@ img#card:hover {
 }
 
 /* Apply Light Mode Footer Style to Dark Mode */
-[data-md-color-scheme="slate"] .md-footer {
-  background-color: #000000 !important; /* Same as Light Mode */
-  color: #ffffff !important; /* Black Text */
-}
+/* [data-md-color-scheme="slate"] .md-footer {
+  background-color: #000000 !important; 
+  color: #ffffff !important; 
+} */
 
 
 /* [data-md-color-scheme="slate"][data-md-color-primary="black"][data-md-color-accent="red"] {
