@@ -92,7 +92,7 @@ img#card:hover {
 }
 /* Navigation Tab Links (Unselected & Selected) */
 [data-md-color-scheme="slate"] .md-tabs__link {
-  color: #cccccc !important; /* Light Gray for Unselected Tabs */
+  color: #dddddd !important; /* Light Gray for Unselected Tabs */
 }
 [data-md-color-scheme="slate"] .md-tabs__link--active {
   color: #ffffff !important; /* Full White for Selected Tab */
@@ -100,7 +100,7 @@ img#card:hover {
 }
 /* Sidebar Navigation Links */
 [data-md-color-scheme="slate"] .md-nav__link {
-  color: #dddddd !important; /* Slightly Lighter Gray */
+  color: #eeeeee !important; /* Slightly Lighter Gray */
 }
 [data-md-color-scheme="slate"] .md-nav__link--active {
   color: #ffffff !important; /* Full White for Active Link */
@@ -148,9 +148,9 @@ img#card:hover {
   border: 1px solid #333333;
 }
 /* Normal Links */
-[data-md-color-scheme="slate"] a {
+/* [data-md-color-scheme="slate"] a {
   color: var(--md-accent-fg-color); /* Keeps Accent Color */
-}
+/* } */ 
 /* Hover Effect for Links */
 [data-md-color-scheme="slate"] a:hover {
   color: #f8f8f8; /* Almost Full White on Hover */
