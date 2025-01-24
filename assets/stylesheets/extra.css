@@ -24,13 +24,12 @@ img#card:hover {
   box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.8);
 } */
 /* Global Styles */
-:root {
+/* :root {
   --md-primary-fg-color: #1a1a1a; /* Dark grey (near black) for header/footer */
-  --md-primary-bg-color: #ffffff; /* White background in light mode */
-  --md-accent-fg-color: #ff0000; /* Red highlight */
-  --md-typeset-color: #000000; /* Black font for light mode */
-}
-
+/*   --md-primary-bg-color: #ffffff; /* White background in light mode */
+/*   --md-accent-fg-color: #ff0000; /* Red highlight */
+/*   --md-typeset-color: #000000; /* Black font for light mode */
+/* }
 /* Dark Mode */
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color: #1a1a1a; /* Dark grey (near black) */
@@ -48,10 +47,10 @@ img#card:hover {
 }
 
 /* Header & Footer */
-.md-header, .md-footer {
+/* .md-header, .md-footer {
   background-color: #1a1a1a !important;
   color: white !important;
-}
+} */
 
 /* Centered Homepage Layout */
 .home-container {
