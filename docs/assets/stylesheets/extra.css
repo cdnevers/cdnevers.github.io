@@ -76,15 +76,98 @@ img#card:hover {
 } */
 
 [data-md-color-scheme="slate"] {
-/*   --md-hue: 0;
-  --md-primary-fg-color: hsl(0, 0%, 0%); */
-  --md-primary-fg-color: #000000;
-  --md-default-bg-color: #1a1a1a; 
-  --md-default-fg-color: #ffffff; 
-  --md-code-bg-color: #262626; 
+  --md-primary-fg-color: #000000; /* Black Navbar */
+  --md-default-bg-color: #111111; /* Almost Black Page Background */
+  --md-default-fg-color: #ffffff; /* Full White Text */
+  --md-code-bg-color: #1a1a1a; /* Dark Grey for Code Blocks */
 }
 
-[data-md-color-scheme="slate"][data-md-color-primary="black"][data-md-color-accent="red"] {
+/* Navigation Bar */
+[data-md-color-scheme="slate"] .md-header {
+  background-color: #000000 !important; /* Full Black Navbar */
+}
+/* Navigation Tabs */
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: #111111 !important; /* Dark Gray Tabs */
+}
+/* Navigation Tab Links (Unselected & Selected) */
+[data-md-color-scheme="slate"] .md-tabs__link {
+  color: #cccccc !important; /* Light Gray for Unselected Tabs */
+}
+[data-md-color-scheme="slate"] .md-tabs__link--active {
+  color: #ffffff !important; /* Full White for Selected Tab */
+  font-weight: bold;
+}
+/* Sidebar Navigation Links */
+[data-md-color-scheme="slate"] .md-nav__link {
+  color: #dddddd !important; /* Slightly Lighter Gray */
+}
+[data-md-color-scheme="slate"] .md-nav__link--active {
+  color: #ffffff !important; /* Full White for Active Link */
+  font-weight: bold;
+}
+/* Sidebar Titles */
+[data-md-color-scheme="slate"] .md-sidebar__title {
+  color: #ffffff !important; /* Full White */
+  font-weight: bold;
+}
+/* Content Titles (h1, h2, h3, etc.) */
+[data-md-color-scheme="slate"] h1 {
+  color: #ffffff !important; /* Full White for H1 */
+}
+[data-md-color-scheme="slate"] h2 {
+  color: #f0f0f0 !important; /* Slightly Off-White for H2 */
+}
+[data-md-color-scheme="slate"] h3 {
+  color: #e0e0e0 !important; /* Light Gray for H3 */
+}
+/* Normal Paragraph Text */
+[data-md-color-scheme="slate"] p {
+  color: #dddddd !important; /* Medium Gray */
+}
+/* Blockquotes */
+[data-md-color-scheme="slate"] blockquote {
+  background-color: #1c1c1c;
+  border-left: 4px solid var(--md-accent-fg-color);
+  color: #ffffff;
+}
+/* Code Blocks */
+.md-typeset pre {
+  background-color: var(--md-code-bg-color);
+  color: #eeeeee; /* Slightly Off-White Code */
+}
+/* Inline Code */
+[data-md-color-scheme="slate"] code {
+  background-color: #1a1a1a;
+  color: #dddddd; /* Light Gray Code */
+}
+/* Tables */
+[data-md-color-scheme="slate"] table {
+  background-color: #181818;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+/* Normal Links */
+[data-md-color-scheme="slate"] a {
+  color: var(--md-accent-fg-color); /* Keeps Accent Color */
+}
+/* Hover Effect for Links */
+[data-md-color-scheme="slate"] a:hover {
+  color: #f8f8f8; /* Almost Full White on Hover */
+}
+/* Cards */
+img#card {
+  transform: scale(0.95);
+  filter: grayscale(100%);
+}
+
+img#card:hover {
+  transform: scale(1);
+  transition: .25s;
+  box-shadow: 0px 0px 10px 0 rgba(255, 255, 255, 0.5);
+}
+
+/* [data-md-color-scheme="slate"][data-md-color-primary="black"][data-md-color-accent="red"] {
   --md-typeset-a-color: #ff5252;
 }
 
@@ -94,9 +177,9 @@ img#card:hover {
 
 .md-typeset pre {
   background-color: var(--md-code-bg-color);
-}
+} */
 
-img#card {
+/* img#card {
   transform: scale(0.95);
 }
 
@@ -104,5 +187,5 @@ img#card:hover {
   transform: scale(1);
   transition: .25s;
   box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.8);
-}
+} */
 
