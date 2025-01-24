@@ -31,20 +31,20 @@ img#card:hover {
 /*   --md-typeset-color: #000000; /* Black font for light mode */
 /* }
 /* Dark Mode */
-[data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #1a1a1a; /* Dark grey (near black) */
-  --md-primary-bg-color: #000000; /* Full black background */
-  --md-accent-fg-color: #ff0000; /* Red highlight */
-  --md-typeset-color: #ffffff; /* Full white font */
+/* [data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #1a1a1a; 
+  --md-primary-bg-color: #000000; 
+  --md-accent-fg-color: #ff0000; 
+  --md-typeset-color: #ffffff; 
 }
 
-/* Light Mode */
+
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color: #ffffff; /* White background */
+  --md-primary-fg-color: #ffffff; 
   --md-primary-bg-color: #ffffff;
-  --md-accent-fg-color: #ff0000; /* Red highlight */
-  --md-typeset-color: #000000; /* Full black font */
-}
+  --md-accent-fg-color: #ff0000; 
+  --md-typeset-color: #000000; 
+} */
 
 /* Header & Footer */
 /* .md-header, .md-footer {
@@ -53,7 +53,7 @@ img#card:hover {
 } */
 
 /* Centered Homepage Layout */
-.home-container {
+/* .home-container {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -73,7 +73,7 @@ img#card:hover {
 
 .home-container .subheading {
   color: black;
-}
+} */
 
 /* Professional Font (Montserrat or Inter recommended) */
 body {
