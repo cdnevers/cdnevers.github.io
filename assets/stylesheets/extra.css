@@ -25,14 +25,31 @@ img#card:hover {
 } */
 /* Global Styles */
 :root {
-  --md-primary-fg-color: #000;  /* Black top and bottom */
-  --md-primary-bg-color: #000;
-  --md-accent-fg-color: #ff2e63; /* Red accent */
+  --md-primary-fg-color: #1a1a1a; /* Dark grey (near black) for header/footer */
+  --md-primary-bg-color: #ffffff; /* White background in light mode */
+  --md-accent-fg-color: #ff0000; /* Red highlight */
+  --md-typeset-color: #000000; /* Black font for light mode */
+}
+
+/* Dark Mode */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #1a1a1a; /* Dark grey (near black) */
+  --md-primary-bg-color: #000000; /* Full black background */
+  --md-accent-fg-color: #ff0000; /* Red highlight */
+  --md-typeset-color: #ffffff; /* Full white font */
+}
+
+/* Light Mode */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #ffffff; /* White background */
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #ff0000; /* Red highlight */
+  --md-typeset-color: #000000; /* Full black font */
 }
 
 /* Header & Footer */
 .md-header, .md-footer {
-  background-color: black !important;
+  background-color: #1a1a1a !important;
   color: white !important;
 }
 
