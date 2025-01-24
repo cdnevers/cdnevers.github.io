@@ -13,6 +13,16 @@ repo_url: https://github.com/cdnevers/cdnevers.github.io/
 # Table of content
 nav:
   - Home: index.md
+  - Research:
+      - Overview: research/index.md
+      - Publications: research/publications.md
+      - Projects: research/projects.md
+  - OpenFOAM:
+      - Tutorials: openfoam/tutorials.md
+      - Advanced Techniques: openfoam/advanced.md
+  - Utilities:
+      - Tools & Scripts: utilities/tools.md
+  - Contact: contact.md
 
 theme:
   name: material
