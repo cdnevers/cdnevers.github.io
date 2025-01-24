@@ -243,11 +243,19 @@ img#card:hover {
 }
 /* Default Links: Red */
 [data-md-color-scheme="default"] a {
-  color: #4d4d4d !important; /* Light Gray */
+  color: #cccccc !important; /* Light Gray */
 }
 /* Hover Effect: Light Gray */
 [data-md-color-scheme="default"] a:hover {
   color: var(--md-accent-fg-color) !important; 
+}
+
+
+
+/* Apply Light Mode Footer Style to Dark Mode */
+[data-md-color-scheme="slate"] .md-footer {
+  background-color: #000000 !important; /* Same as Light Mode */
+  color: #ffffff !important; /* Black Text */
 }
 
 
