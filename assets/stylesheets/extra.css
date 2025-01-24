@@ -250,8 +250,6 @@ img#card:hover {
   color: var(--md-accent-fg-color) !important; 
 }
 
-
-
 /* Apply Light Mode Footer Style to Dark Mode */
 [data-md-color-scheme="slate"] .md-footer {
   background-color: #000000 !important; /* Same as Light Mode */
