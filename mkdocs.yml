@@ -22,7 +22,7 @@ nav:
       - Advanced Techniques: openfoam/advanced.md
   - Utilities:
       - Tools & Scripts: utilities/tools.md
-  - Contact: contact.md
+  - Profile: contact.md
 
 theme:
   name: material
