@@ -2,34 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://cdnevers.github.io/</loc>
-         <lastmod>2025-01-24</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://cdnevers.github.io/contact/</loc>
-         <lastmod>2025-01-24</lastmod>
+         <lastmod>2026-04-26</lastmod>
+    </url>
+    <url>
+         <loc>https://cdnevers.github.io/guides/</loc>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://cdnevers.github.io/openfoam/advanced/</loc>
-         <lastmod>2025-01-24</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://cdnevers.github.io/openfoam/tutorials/</loc>
-         <lastmod>2025-01-24</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://cdnevers.github.io/research/</loc>
-         <lastmod>2025-01-24</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://cdnevers.github.io/research/projects/</loc>
-         <lastmod>2025-01-24</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://cdnevers.github.io/research/publications/</loc>
-         <lastmod>2025-01-24</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
     <url>
          <loc>https://cdnevers.github.io/utilities/tools/</loc>
-         <lastmod>2025-01-24</lastmod>
+         <lastmod>2026-04-26</lastmod>
     </url>
 </urlset>
