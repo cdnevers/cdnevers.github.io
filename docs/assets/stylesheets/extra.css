@@ -1,315 +1,343 @@
-/* [data-md-color-scheme="slate"] {
-  --md-hue: 220;
-}
+/* ============================================================
+   Fonts
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
 
-[data-md-color-scheme="slate"][data-md-color-primary="black"][data-md-color-accent="red"] {
-  --md-typeset-a-color: #ff5252;
-}
-
-[data-md-color-scheme="default"][data-md-color-primary="black"][data-md-color-accent="light-blue"] {
-  --md-typeset-a-color: #0277bd;
-}
-
-.md-typeset pre {
-  background-color: var(--md-code-bg-color);
-}
-
-img#card {
-  transform: scale(0.95);
-}
-
-img#card:hover {
-  transform: scale(1);
-  transition: .25s;
-  box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.8);
-} */
-/* Global Styles */
-/* :root {
-  --md-primary-fg-color: #1a1a1a; /* Dark grey (near black) for header/footer */
-/*   --md-primary-bg-color: #ffffff; /* White background in light mode */
-/*   --md-accent-fg-color: #ff0000; /* Red highlight */
-/*   --md-typeset-color: #000000; /* Black font for light mode */
-/* }
-/* Dark Mode */
-/* [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #1a1a1a; 
-  --md-primary-bg-color: #000000; 
-  --md-accent-fg-color: #ff0000; 
-  --md-typeset-color: #ffffff; 
-}
-
-
+/* ============================================================
+   Palette — Cartographic Teal (light)
+   ============================================================ */
+:root,
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color: #ffffff; 
-  --md-primary-bg-color: #ffffff;
-  --md-accent-fg-color: #ff0000; 
-  --md-typeset-color: #000000; 
-} */
-
-/* Header & Footer */
-/* .md-header, .md-footer {
-  background-color: #1a1a1a !important;
-  color: white !important;
-} */
-
-/* Centered Homepage Layout */
-/* .home-container {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to right, black 50%, white 50%);
+  --md-primary-fg-color:        #1e3a4c;
+  --md-primary-fg-color--light: #2e5470;
+  --md-primary-fg-color--dark:  #122432;
+  --md-accent-fg-color:         #d4820a;
+  --md-default-bg-color:        #f6f3ee;
+  --md-default-fg-color:        #1a1a1a;
+  --md-default-fg-color--light: #4a4a4a;
+  --cn-card-bg:                 #ffffff;
+  --cn-card-border:             #e0dbd3;
+  --cn-badge-bg:                #fff3e0;
+  --cn-badge-color:             #b06000;
 }
-
-.home-container .parallax-layer {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.home-container .heading {
-  color: white;
-}
-
-.home-container .subheading {
-  color: black;
-} */
-
-/* Ensure footer background is fully black */
-[data-md-color-scheme="default"] .md-footer,
-[data-md-color-scheme="slate"] .md-footer {
-  background-color: #000000 !important; /* Fully Black */
-  color: #ffffff !important; /* Fully White Text */
-}
-
-/* Ensure footer copyright text is white */
-[data-md-color-scheme="default"] .md-footer-meta,
-[data-md-color-scheme="slate"] .md-footer-meta {
-  color: #ffffff !important; /* Ensure White Text */
-}
-
 
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #000000; /* Black Navbar */
-  --md-default-bg-color: #111111; /* Almost Black Page Background */
-  --md-default-fg-color: #ffffff; /* Full White Text */
-  --md-code-bg-color: #1a1a1a; /* Dark Grey for Code Blocks */
+  --md-primary-fg-color:        #4a8fa8;
+  --md-accent-fg-color:         #d4820a;
+  --md-default-bg-color:        #1a2530;
+  --cn-card-bg:                 #1e2f3c;
+  --cn-card-border:             #2d4558;
+  --cn-badge-bg:                #2a1f0a;
+  --cn-badge-color:             #f0a830;
 }
 
-/* Navigation Bar */
-[data-md-color-scheme="slate"] .md-header {
-  background-color: #000000 !important; /* Full Black Navbar */
-}
-/* Navigation Tabs */
-[data-md-color-scheme="slate"] .md-tabs {
-  background-color: #000000 !important; /* Black */
-}
-/* Navigation Tab Links (Unselected & Selected) */
-[data-md-color-scheme="slate"] .md-tabs__link {
-  color: #dddddd !important; /* Light Gray for Unselected Tabs */
-}
-[data-md-color-scheme="slate"] .md-tabs__link--active {
-  color: #ffffff !important; /* Full White for Selected Tab */
-  font-weight: bold;
-}
-/* Sidebar Navigation Links */
-[data-md-color-scheme="slate"] .md-nav__link {
-  color: #eeeeee !important; /* Slightly Lighter Gray */
-}
-[data-md-color-scheme="slate"] .md-nav__link--active {
-  color: #ffffff !important; /* Full White for Active Link */
-  font-weight: bold;
-}
-/* Sidebar Titles */
-[data-md-color-scheme="slate"] .md-sidebar__title {
-  color: #ffffff !important; /* Full White */
-  font-weight: bold;
-}
-/* Content Titles (h1, h2, h3, etc.) */
-[data-md-color-scheme="slate"] h1 {
-  color: #ffffff !important; /* Full White for H1 */
-}
-[data-md-color-scheme="slate"] h2 {
-  color: #f0f0f0 !important; /* Slightly Off-White for H2 */
-}
-[data-md-color-scheme="slate"] h3 {
-  color: #e0e0e0 !important; /* Light Gray for H3 */
-}
-/* Normal Paragraph Text */
-[data-md-color-scheme="slate"] p {
-  color: #dddddd !important; /* Medium Gray */
-}
-/* Blockquotes */
-[data-md-color-scheme="slate"] blockquote {
-  background-color: #1c1c1c;
-  border-left: 4px solid var(--md-accent-fg-color);
-  color: #ffffff;
-}
-/* Code Blocks */
-.md-typeset pre {
-  background-color: var(--md-code-bg-color);
-  color: #eeeeee; /* Slightly Off-White Code */
-}
-/* Inline Code */
-[data-md-color-scheme="slate"] code {
-  background-color: #1a1a1a;
-  color: #dddddd; /* Light Gray Code */
-}
-/* Tables */
-[data-md-color-scheme="slate"] table {
-  background-color: #181818;
-  color: #ffffff;
-  border: 1px solid #333333;
-}
-/* Normal Links */
-[data-md-color-scheme="slate"] a {
-/*   color: var(--md-accent-fg-color); /* Keeps Accent Color */
-  color: #cccccc !important; /* Light Gray */
-} 
-/* Hover Effect for Links */
-[data-md-color-scheme="slate"] a:hover {
-/*   color: #f8f8f8;  */
-  color: var(--md-accent-fg-color) !important; 
-}
-/* Cards */
-img#card {
-  transform: scale(0.95);
-  filter: grayscale(100%);
+/* ============================================================
+   Global — justified text
+   ============================================================ */
+.md-typeset p,
+.md-typeset li,
+.md-typeset td {
+  text-align: justify;
+  hyphens: auto;
 }
 
-img#card:hover {
-  transform: scale(1);
-  transition: .25s;
-  box-shadow: 0px 0px 10px 0 rgba(255, 255, 255, 0.5);
+body, .md-typeset {
+  font-family: 'DM Sans', sans-serif !important;
 }
 
-[data-md-color-scheme="default"] {
-  --md-primary-fg-color: #000000; /* Black Header (Same as Dark Mode) */
-  --md-default-bg-color: #ffffff; /* White Background */
-  --md-default-fg-color: #000000; /* Black Text */
-  --md-code-bg-color: #f5f5f5; /* Light Code Blocks */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  letter-spacing: -0.01em;
+  text-align: left !important;
 }
 
-/* Navigation Bar */
-[data-md-color-scheme="default"] .md-header {
-  background-color: #000000 !important; /* Full Black Navbar */
-}
-/* Navigation Tabs */
-[data-md-color-scheme="default"] .md-tabs {
-  background-color: #000000 !important; /* Black */
-}
-/* Navigation Tab Links (Unselected & Selected) */
-[data-md-color-scheme="default"] .md-tabs__link {
-  color: #dddddd !important; /* Light Gray for Unselected Tabs */
-}
-[data-md-color-scheme="default"] .md-tabs__link--active {
-  color: #ffffff !important; /* Full White for Selected Tab */
-  font-weight: bold;
-}
-/* Sidebar Navigation Links */
-[data-md-color-scheme="default"] .md-nav__link {
-  color: #eeeeee !important; /* Slightly Lighter Gray */
-}
-[data-md-color-scheme="default"] .md-nav__link--active {
-  color: #ffffff !important; /* Full White for Active Link */
-  font-weight: bold;
-}
-/* Sidebar Titles */
-[data-md-color-scheme="default"] .md-sidebar__title {
-  color: #ffffff !important; /* Full White */
-  font-weight: bold;
-}
-/* Headings */
-[data-md-color-scheme="default"] h1 {
-  color: #000000 !important; /* Black H1 */
-}
-[data-md-color-scheme="default"] h2 {
-  color: #1a1a1a !important; /* Slightly Lighter H2 */
-}
-[data-md-color-scheme="default"] h3 {
-  color: #262626 !important; /* Dark Gray H3 */
-}
-/* Paragraph Text */
-[data-md-color-scheme="default"] p {
-  color: #0d0d0d !important; /* Dark Gray */
-}
-/* Blockquotes */
-[data-md-color-scheme="default"] blockquote {
-  background-color: #f8f8f8;
-  border-left: 4px solid var(--md-accent-fg-color);
-  color: #000000;
-}
-/* Code Blocks */
-[data-md-color-scheme="default"] pre {
-  background-color: var(--md-code-bg-color);
-  color: #222222; /* Dark Gray Code */
-}
-/* Inline Code */
-[data-md-color-scheme="default"] code {
-  background-color: #f5f5f5;
-  color: #000000; /* Black Inline Code */
-}
-/* Tables */
-[data-md-color-scheme="default"] table {
-  background-color: #f8f8f8;
-  color: #000000;
-  border: 1px solid #dddddd;
-}
-/* Default Links: Red */
-[data-md-color-scheme="default"] a {
-  color: #cccccc !important; /* Light Gray */
-}
-/* Hover Effect: Light Gray */
-[data-md-color-scheme="default"] a:hover {
-  color: var(--md-accent-fg-color) !important; 
+/* ============================================================
+   Homepage hero — split layout
+   ============================================================ */
+.cn-hero {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3rem 0 2.5rem;
+  border-bottom: 1px solid var(--cn-card-border);
+  margin-bottom: 2.5rem;
 }
 
-
-/* DARK MODE (Keep existing colors) */
-[data-md-color-scheme="slate"] .md-nav__item a {
-  color: #dddddd !important; /* Light Gray Text */
+.cn-hero-text {
+  flex: 1 1 55%;
+  min-width: 0;
 }
 
-[data-md-color-scheme="slate"] .md-nav__item a:hover {
-  color: #ffffff !important; /* Full White on Hover */
+.cn-hero-visual {
+  flex: 1 1 42%;
+  min-width: 0;
 }
 
-/* LIGHT MODE (Fix text to be darker) */
-[data-md-color-scheme="default"] .md-nav__item a {
-  color: #222222 !important; /* Dark Gray */
+/* Big name treatment */
+.cn-hero-name {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.8rem, 6vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.0;
+  color: var(--md-primary-fg-color);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  /* Decorative left border accent */
+  border-left: 5px solid var(--md-accent-fg-color);
+  padding-left: 1rem;
 }
 
-[data-md-color-scheme="default"] .md-nav__item a:hover {
-  color: #000000 !important; /* Full Black on Hover */
+.cn-subtitle {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 1.4rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-
-/* Apply Light Mode Footer Style to Dark Mode */
-/* [data-md-color-scheme="slate"] .md-footer {
-  background-color: #000000 !important; 
-  color: #ffffff !important; 
-} */
-
-
-/* [data-md-color-scheme="slate"][data-md-color-primary="black"][data-md-color-accent="red"] {
-  --md-typeset-a-color: #ff5252;
+.cn-bio {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--md-default-fg-color);
+  text-align: justify;
+  hyphens: auto;
 }
 
-[data-md-color-scheme="default"][data-md-color-primary="black"][data-md-color-accent="red"] {
-  --md-typeset-a-color: #ff5252;
+/* ============================================================
+   CFD SVG animation
+   ============================================================ */
+.cn-cfd-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  background: linear-gradient(160deg, #edf2f7 0%, #f6f3ee 100%);
+  border: 1px solid var(--cn-card-border);
+  padding: 0.5rem;
 }
 
-.md-typeset pre {
-  background-color: var(--md-code-bg-color);
-} */
-
-/* img#card {
-  transform: scale(0.95);
+[data-md-color-scheme="slate"] .cn-cfd-svg {
+  background: linear-gradient(160deg, #1a2530 0%, #1e2f3c 100%);
 }
 
-img#card:hover {
-  transform: scale(1);
-  transition: .25s;
-  box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.8);
-} */
+/* Animate flow: moving dashes from left to right */
+@keyframes flow {
+  from { stroke-dashoffset: 200; }
+  to   { stroke-dashoffset: 0; }
+}
 
+.cn-stream {
+  stroke-dasharray: 200;
+}
+
+.cn-stream-1 { animation: flow 3.5s linear infinite; }
+.cn-stream-2 { animation: flow 3.2s linear infinite 0.2s; }
+.cn-stream-3 { animation: flow 3.0s linear infinite 0.4s; }
+.cn-stream-4 { animation: flow 2.7s linear infinite 0.1s; }
+.cn-stream-5 { animation: flow 2.9s linear infinite 0.3s; }
+.cn-stream-6 { animation: flow 3.1s linear infinite 0.5s; }
+.cn-stream-w1 { animation: flow 4.5s linear infinite 0.8s; }
+.cn-stream-w2 { animation: flow 5.0s linear infinite 1.2s; }
+
+/* ============================================================
+   Quick-link cards
+   ============================================================ */
+.cn-cards {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.cn-card {
+  flex: 1 1 150px;
+  background: var(--cn-card-bg);
+  border: 1px solid var(--cn-card-border);
+  border-radius: 8px;
+  padding: 1.3rem 1.4rem;
+  text-decoration: none !important;
+  color: var(--md-default-fg-color) !important;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+
+.cn-card:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 4px 16px rgba(30,58,76,0.10);
+  transform: translateY(-2px);
+}
+
+.cn-card .cn-card-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.cn-card .cn-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+  margin-bottom: 0.25rem;
+}
+
+.cn-card .cn-card-desc {
+  font-size: 0.82rem;
+  color: var(--md-default-fg-color--light);
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* ============================================================
+   Publication cards
+   ============================================================ */
+.cn-pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cn-pub {
+  background: var(--cn-card-bg);
+  border: 1px solid var(--cn-card-border);
+  border-left: 4px solid var(--md-primary-fg-color);
+  border-radius: 6px;
+  padding: 1.2rem 1.4rem;
+}
+
+.cn-pub-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.cn-pub-title a {
+  color: var(--md-primary-fg-color) !important;
+  text-decoration: none;
+}
+
+.cn-pub-title a:hover {
+  color: var(--md-accent-fg-color) !important;
+  text-decoration: underline;
+}
+
+.cn-pub-meta {
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.4rem;
+  text-align: left;
+}
+
+.cn-pub-authors {
+  font-size: 0.82rem;
+  color: var(--md-default-fg-color--light);
+  font-style: italic;
+  text-align: left;
+}
+
+.cn-pub-badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cn-badge {
+  display: inline-block;
+  background: var(--cn-badge-bg);
+  color: var(--cn-badge-color);
+  border-radius: 20px;
+  padding: 0.15rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.cn-badge-journal {
+  background: #e8f0f5;
+  color: #1e3a4c;
+}
+
+[data-md-color-scheme="slate"] .cn-badge-journal {
+  background: #1a2d3c;
+  color: #7ab8d0;
+}
+
+/* ============================================================
+   Contact form
+   ============================================================ */
+.cn-contact-form {
+  max-width: 560px;
+  margin-top: 1.5rem;
+}
+
+.cn-contact-form input,
+.cn-contact-form textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--cn-card-border);
+  border-radius: 5px;
+  background: var(--cn-card-bg);
+  color: var(--md-default-fg-color);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.cn-contact-form input:focus,
+.cn-contact-form textarea:focus {
+  outline: none;
+  border-color: var(--md-primary-fg-color);
+}
+
+.cn-contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.cn-contact-form button {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem 2rem;
+  font-size: 0.95rem;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cn-contact-form button:hover {
+  background: var(--md-accent-fg-color);
+}
+
+/* ============================================================
+   Header & tabs
+   ============================================================ */
+.md-header {
+  background-color: var(--md-primary-fg-color) !important;
+}
+
+.md-tabs {
+  background-color: #122432 !important;
+}
+
+/* Responsive: stack hero on small screens */
+@media (max-width: 680px) {
+  .cn-hero {
+    flex-direction: column;
+  }
+  .cn-hero-visual {
+    width: 100%;
+  }
+  .cn-hero-name {
+    font-size: 2.5rem;
+  }
+}

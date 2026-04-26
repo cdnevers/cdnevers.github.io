@@ -1,28 +1,20 @@
-copyright: Copyright &copy; 2025 Clement Nevers
-site_description: Personal website of Clement Nevers
+copyright: Copyright &copy; 2026 Clement Nevers
+site_description: Personal website of Clément Nevers — Postdoctoral Research Fellow, Urban Physics & CFD
 site_author: Clément Nevers
 site_name: Clément Nevers
 site_url: https://cdnevers.github.io/
 site_dir: public
 
-# repository edit info
 edit_uri: edit/main/docs/
-# repo_name: cdnevers/cdnevers.github.io/
-# repo_url: https://github.com/cdnevers/cdnevers.github.io/
 
-# Table of content
 nav:
   - Home: index.md
   - Research:
       - Overview: research/index.md
       - Publications: research/publications.md
-      - Projects: research/projects.md
-  - OpenFOAM:
-      - Tutorials: openfoam/tutorials.md
-      - Advanced Techniques: openfoam/advanced.md
-  - Utilities:
-      - Tools & Scripts: utilities/tools.md
-  - Profile: contact.md
+  - Guides:
+      - Overview: guides/index.md
+  - Contact: contact.md
 
 theme:
   name: material
@@ -30,21 +22,21 @@ theme:
   logo: assets/images/Logo_CN.png
   favicon: assets/images/Logo_CN.png
   font:
-    text: Noto Sans
-    code: Fira code
+    text: DM Sans
+    code: Fira Code
   palette:
-    - scheme: slate
-      primary: black
-      accent: red
+    - scheme: default
+      primary: custom
+      accent: custom
       toggle:
         icon: material/toggle-switch
-        name: Switch to light mode
-    - scheme: default
-      primary: black
-      accent: red
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
       toggle:
         icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
+        name: Switch to light mode
   features:
     - navigation.tabs
     - navigation.sections
@@ -63,7 +55,8 @@ plugins:
   - awesome-pages
   - redirects:
       redirect_maps:
-
+        openfoam/tutorials.md: guides/index.md
+        openfoam/advanced.md: guides/index.md
 
 markdown_extensions:
   - admonition
@@ -95,10 +88,16 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/cdnevers
-    - icon: fontawesome/brands/linkedin
-      link: https://github.com/cdnevers
+      name: GitHub
     - icon: fontawesome/solid/graduation-cap
-      link: https://github.com/cdnevers
+      link: https://scholar.google.ca/citations?user=GVoTFvMAAAAJ&hl=fr&oi=ao
+      name: Google Scholar
+    - icon: fontawesome/brands/researchgate
+      link: https://www.researchgate.net/profile/Clement-Nevers
+      name: ResearchGate
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE
+      name: LinkedIn
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6

@@ -1,59 +1,333 @@
 {% extends "base.html" %}
 
-<!-- Custom front matter -->
 {% block extrahead %}
-  <!-- Extra style sheets (can't be set in mkdocs.yml due to content hash) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=Noto+Sans&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ 'assets/stylesheets/main.css' | url }}"/>
-  <link rel="me" href="https://mastodon.social/@lento234">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 {% endblock %}
 
-<!-- Render hero under tabs -->
 {% block tabs %}
   {{ super() }}
 
-  <!-- Additional styles for landing page -->
   <style>
-    /* Application header should be static for the landing page */
-    .md-header {
-      position: initial;
-    }
-    /* Remove spacing, as we cannot hide it completely */
-    .md-main__inner {
-      margin: 0;
-    }
+    .md-header { position: fixed; top: 0; z-index: 100; }
+    .md-main__inner { margin: 0; }
+
     @media screen and (min-width: 60em) {
-      .md-content {
-        display: none;
-      }
-      .md-content__inner {
-        display: none;
-      }
-      .md-main__inner {
-        display: none;
-      }
-      .md-footer__inner:not([hidden]) {
-        display: none;
-      }
+      .md-content, .md-content__inner,
+      .md-main__inner, .md-footer__inner:not([hidden]) { display: none; }
+    }
+
+    /* ── Hero ───────────────────────────────────────── */
+    .cn-hero-section {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: #0d1e2a;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #cn-canvas {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    #cn-canvas canvas {
+      display: block;
+    }
+
+    .cn-hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: left;
+      padding: 0 2.5rem;
+      max-width: 860px;
+      width: 100%;
+    }
+
+    .cn-hero-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(3.2rem, 8vw, 6rem);
+      font-weight: 700;
+      line-height: 1.0;
+      color: #f0ede8;
+      letter-spacing: -0.03em;
+      border-left: 6px solid #d4820a;
+      padding-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cn-hero-subtitle {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(0.85rem, 2vw, 1.05rem);
+      font-weight: 300;
+      color: #8ab4c8;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding-left: 1.4rem;
+      margin-bottom: 2rem;
+    }
+
+    .cn-hero-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-left: 1.4rem;
+    }
+
+    .cn-hero-link {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: #8ab4c8 !important;
+      text-decoration: none !important;
+      border: 1px solid rgba(138,180,200,0.3);
+      padding: 0.4rem 1rem;
+      border-radius: 3px;
+      letter-spacing: 0.05em;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .cn-hero-link:hover {
+      color: #d4820a !important;
+      border-color: #d4820a;
+    }
+
+    .cn-scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      color: rgba(138,180,200,0.5);
+      font-size: 1.4rem;
+      animation: cn-bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes cn-bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ── About (below fold) ─────────────────────────── */
+    .cn-about-section {
+      background: #f6f3ee;
+      padding: 4rem 2rem 3rem;
+    }
+
+    .cn-about-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .cn-section-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #d4820a;
+      margin-bottom: 0.6rem;
+    }
+
+    .cn-about-inner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #1e3a4c;
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+    }
+
+    .cn-about-bio {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #2a2a2a;
+      text-align: justify;
+      hyphens: auto;
+      max-width: 700px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Cards ──────────────────────────────────────── */
+    .cn-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .cn-card {
+      background: #fff;
+      border: 1px solid #e0dbd3;
+      border-radius: 8px;
+      padding: 1.3rem 1.4rem;
+      text-decoration: none !important;
+      color: #1a1a1a !important;
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+    }
+
+    .cn-card:hover {
+      border-color: #d4820a;
+      box-shadow: 0 4px 18px rgba(30,58,76,0.10);
+      transform: translateY(-2px);
+    }
+
+    .cn-card-icon { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+
+    .cn-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1e3a4c;
+      margin-bottom: 0.25rem;
+    }
+
+    .cn-card-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      color: #4a4a4a;
+      line-height: 1.5;
+    }
+
+    /* ── Responsive ─────────────────────────────────── */
+    @media (max-width: 600px) {
+      .cn-hero-name { font-size: 2.8rem; }
     }
   </style>
-  <div class="home-container">
-    <div class="wrapper">
-      <div class="parallax-group">
-        <div class="parallax-layer heading">Clément Nevers</div>
-        <div class="parallax-layer subheading">Civil and Building Engineer</div>
-        <!-- <div class="parallax-layer profile">
-          <img src="/assets/profile.png" alt="Profile" class="image profile"/>
-        </div> -->
+
+  <!-- Hero -->
+  <section class="cn-hero-section">
+    <div id="cn-canvas"></div>
+    <div class="cn-hero-content">
+      <div class="cn-hero-name">Clément<br>Nevers</div>
+      <p class="cn-hero-subtitle">Postdoctoral Research Fellow &nbsp;·&nbsp;<br> Université de Sherbrooke</p>
+      <div class="cn-hero-links">
+        <a href="research/" class="cn-hero-link">Research</a>
+        <a href="research/publications/" class="cn-hero-link">Publications</a>
+        <a href="guides/" class="cn-hero-link">Guides</a>
+        <a href="contact/" class="cn-hero-link">Contact</a>
       </div>
     </div>
-  </div>
-  <script src="assets/javascripts/scroll.js"></script>
+    <div class="cn-scroll-hint">↓</div>
+  </section>
+
+  <!-- Below fold -->
+  <section class="cn-about-section">
+    <div class="cn-about-inner">
+      <div class="cn-section-label">About</div>
+      <h2>Urban Physics &amp; Computational Fluid Dynamics</h2>
+      <p class="cn-about-bio">
+        Cities are hot, turbulent, and complex — and I use CFD to make sense of them.
+        My research maps the invisible forces shaping urban climate: wind threading between buildings,
+        the cooling shadow of a tree canopy, heat trapped in a street canyon.
+        Through high-fidelity simulations and data-driven analysis, I build physics-informed tools
+        that help design cities people can actually live in.
+      </p>
+      <div class="cn-cards">
+        <a href="research/" class="cn-card">
+          <span class="cn-card-icon">🔬</span>
+          <div class="cn-card-title">Research</div>
+          <div class="cn-card-desc">Urban physics, CFD, microclimate modelling</div>
+        </a>
+        <a href="research/publications/" class="cn-card">
+          <span class="cn-card-icon">📄</span>
+          <div class="cn-card-title">Publications</div>
+          <div class="cn-card-desc">Peer-reviewed journal articles</div>
+        </a>
+        <a href="guides/" class="cn-card">
+          <span class="cn-card-icon">📘</span>
+          <div class="cn-card-title">Guides</div>
+          <div class="cn-card-desc">umfoam tutorials &amp; helpers</div>
+        </a>
+        <a href="contact/" class="cn-card">
+          <span class="cn-card-icon">✉️</span>
+          <div class="cn-card-title">Contact</div>
+          <div class="cn-card-desc">Get in touch</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- p5.js flow field -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <script>
+  new p5(function(s) {
+    const N = 600;
+    const SC = 18;
+    let particles = [];
+    let t = 0;
+
+    function Particle() {
+      this.reset = function() {
+        this.x  = Math.random() * s.width;
+        this.y  = Math.random() * s.height;
+        this.px = this.x;
+        this.py = this.y;
+        this.vx = 0; this.vy = 0;
+        this.speed = 1.2 + Math.random() * 2.2;
+        this.life  = Math.random() * 150;
+        this.maxLife = 80 + Math.random() * 180;
+      };
+      this.reset();
+
+      this.step = function() {
+        var gx  = Math.floor(this.x / SC);
+        var gy  = Math.floor(this.y / SC);
+        var ang = s.noise(gx * 0.11, gy * 0.11, t) * s.TWO_PI * 2.4;
+        this.vx += Math.cos(ang) * 0.38;
+        this.vy += Math.sin(ang) * 0.38;
+        var spd = Math.sqrt(this.vx*this.vx + this.vy*this.vy);
+        if (spd > this.speed) { this.vx *= this.speed/spd; this.vy *= this.speed/spd; }
+        this.px = this.x; this.py = this.y;
+        this.x += this.vx; this.y += this.vy;
+        this.life++;
+        if (this.x < 0 || this.x > s.width || this.y < 0 || this.y > s.height || this.life > this.maxLife) {
+          this.reset();
+        }
+      };
+
+      this.draw = function() {
+        var spd   = Math.sqrt(this.vx*this.vx + this.vy*this.vy);
+        var ratio = spd / this.speed;
+        // Teal (190°) → Amber (35°) by speed
+        var hue   = s.lerp(190, 35, ratio * ratio);
+        var sat   = s.lerp(45, 90, ratio);
+        var bri   = s.lerp(75, 95, ratio);
+        var alph  = s.map(this.life, 0, this.maxLife, 75, 15);
+        s.stroke(hue, sat, bri, alph);
+        s.strokeWeight(0.8 + ratio * 1.0);
+        s.line(this.px, this.py, this.x, this.y);
+      };
+    }
+
+    s.setup = function() {
+      var cnv = s.createCanvas(s.windowWidth, s.windowHeight);
+      cnv.parent('cn-canvas');
+      s.colorMode(s.HSB, 360, 100, 100, 100);
+      s.noFill();
+      for (var i = 0; i < N; i++) particles.push(new Particle());
+    };
+
+    s.draw = function() {
+      // Trail: semi-transparent dark overlay
+      s.noStroke();
+      s.fill(210, 55, 10, 10);
+      s.rect(0, 0, s.width, s.height);
+      t += 0.0025;
+      for (var i = 0; i < particles.length; i++) {
+        particles[i].step();
+        particles[i].draw();
+      }
+    };
+
+    s.windowResized = function() {
+      s.resizeCanvas(s.windowWidth, s.windowHeight);
+    };
+  }, 'cn-canvas');
+  </script>
 {% endblock %}
 
-<!-- Content -->
-{% block content %}
-{% endblock %}
+{% block content %}{% endblock %}
